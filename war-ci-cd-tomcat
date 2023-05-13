@@ -19,9 +19,8 @@ node('master'){
 	  sshagent(['tomcat-dev']) {
 	    sh "mv target/myweb*.war target/myweb.war"
 		
-		sh "scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@172.31.11.2:/opt/tomcat8/webapps/"
-		
-		sh "ssh ec2-user@172.31.11.2 /opt/tomcat8/bin/startup.sh"
+		sh "scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@172.31.35.218:/opt/tomcat/webapps/"
+		172.31.35.218172.31.11.2 /opt/tomcat/bin/startup.sh"
 	  }
 	}
 	
